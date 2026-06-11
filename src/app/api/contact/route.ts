@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const BREVO_API_KEY = process.env.BREVO_API_KEY;
-const TO_EMAIL = "daniel@sikatrix.com";
-const FROM_EMAIL = "noreply@recyclingleaders.co.za";
+const TO_EMAIL = "info@recyclingleaders.co.za";
+const FROM_EMAIL = "info@recyclingleaders.co.za";
 const FROM_NAME = "ARL Website";
 
 export async function POST(req: NextRequest) {
@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
     },
     body: JSON.stringify({
       sender: { name: FROM_NAME, email: FROM_EMAIL },
-      to: [{ email: TO_EMAIL, name: "Daniel Amoah" }],
+      to: [{ email: TO_EMAIL, name: "All Recycling Leaders" }],
       subject,
       htmlContent: `<table style="font-family:sans-serif;font-size:14px;border-collapse:collapse">${htmlContent}</table>`,
     }),

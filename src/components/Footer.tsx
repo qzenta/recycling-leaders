@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ARLLogo from "./ARLLogo";
+import { locations } from "@/lib/locations";
 
 const quickLinks = [
   { href: "/sell-scrap", label: "Sell Scrap" },
@@ -60,8 +61,8 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="mailto:info@recyclingleaders.co.za" className="hover:text-white transition-colors">
-                ☎️ Landline: TBC
+              <a href="tel:+27164231299" className="hover:text-white transition-colors">
+                ☎️ (016) 423-1299
               </a>
             </li>
             <li className="leading-relaxed">
@@ -72,7 +73,23 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 mt-10 pt-6 border-t border-gray-700 text-xs text-gray-500 flex flex-col md:flex-row justify-between gap-2">
+      {/* Locations */}
+      <div className="max-w-6xl mx-auto px-4 mt-8 pt-8 border-t border-gray-800">
+        <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">Areas We Serve</p>
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs">
+          {locations.map((l) => (
+            <Link
+              key={l.slug}
+              href={`/locations/${l.slug}`}
+              className="text-gray-500 hover:text-white transition-colors"
+            >
+              {l.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 mt-6 pt-6 border-t border-gray-700 text-xs text-gray-500 flex flex-col md:flex-row justify-between gap-2">
         <span>© 2026 All Recycling Leaders</span>
         <span>recyclingleaders.co.za</span>
       </div>

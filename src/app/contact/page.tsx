@@ -17,8 +17,8 @@ const contactCards = [
   {
     icon: "☎️",
     label: "Landline",
-    value: "TBC",
-    href: "mailto:info@recyclingleaders.co.za",
+    value: "(016) 423-1299",
+    href: "tel:+27164231299",
   },
   {
     icon: "📍",
