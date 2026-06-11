@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  --color-green-primary: #2E7D32;
+  --color-green-light: #E8F5E9;
+  --color-green-mid: #4CAF50;
+  --color-grey-bg: #F4F4F4;
+  --color-grey-surface: #FFFFFF;
+  --color-grey-border: #DCDCDC;
+  --color-grey-muted: #777777;
+  --color-grey-dark: #2C2C2C;
+  --color-grey-darkest: #1A1A1A;
+}
+
+body {
+  background-color: var(--color-grey-bg);
+  color: var(--color-grey-dark);
+}
