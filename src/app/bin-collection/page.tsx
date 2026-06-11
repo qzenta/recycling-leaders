@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
 
@@ -36,6 +37,19 @@ export default function BinCollectionPage() {
         headline="Hassle-Free Monthly Bin Collection"
         subheadline="We handle the waste so you can focus on your business. Sedibeng and Vaal region."
       />
+
+      {/* Yard photo strip */}
+      <div className="relative w-full h-56 md:h-72 overflow-hidden">
+        <Image
+          src="/images/truck-bin-yard.jpeg"
+          alt="ARL collection truck with bin at the Solandpark yard warehouse"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
 
       {/* How It Works */}
       <section className="max-w-4xl mx-auto px-4 py-14">

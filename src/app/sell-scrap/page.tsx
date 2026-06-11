@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
 
@@ -33,6 +34,19 @@ export default function SellScrapPage() {
         headline="We Buy All Scrap Metal — Fast &amp; Fair"
         subheadline="Accurate weighing, fair market prices, and same-day payment in Sedibeng and the Vaal region."
       />
+
+      {/* Yard photo strip */}
+      <div className="relative w-full h-56 md:h-72 overflow-hidden">
+        <Image
+          src="/images/truck-skip-weighbridge.jpeg"
+          alt="Skip truck being weighed at ARL's Solandpark yard"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
 
       {/* Metals We Buy */}
       <section className="max-w-6xl mx-auto px-4 py-14">

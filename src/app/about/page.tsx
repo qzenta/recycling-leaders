@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
@@ -63,9 +64,14 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          {/* Placeholder image */}
-          <div className="bg-[var(--color-grey-border)] rounded-xl aspect-video flex items-center justify-center text-[var(--color-grey-muted)] text-sm">
-            [Photo: Client to supply — yard/operations photo]
+          <div className="relative rounded-xl overflow-hidden aspect-video">
+            <Image
+              src="/images/yard-weighbridge.jpeg"
+              alt="All Recycling Leaders yard — trucks lined up on the weighbridge at our Solandpark facility"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
         </div>
       </section>

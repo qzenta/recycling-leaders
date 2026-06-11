@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -30,8 +31,17 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[var(--color-green-primary)] text-white py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative text-white py-20 px-4 overflow-hidden">
+        <Image
+          src="/images/yard-trucks.jpeg"
+          alt="All Recycling Leaders yard — trucks being weighed at our Solandpark facility"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[var(--color-green-primary)]/80" />
+        <div className="relative max-w-4xl mx-auto text-center">
           <h1
             className="text-4xl md:text-6xl font-bold leading-tight mb-4"
             style={{ fontFamily: "var(--font-heading)" }}
