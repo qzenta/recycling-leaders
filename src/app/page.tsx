@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import HeroCarousel from "@/components/HeroCarousel";
+import PartnersMarquee from "@/components/PartnersMarquee";
 
 export const metadata: Metadata = {
   title: "All Recycling Leaders — Scrap Metal Buyers in Vaal",
@@ -30,43 +31,8 @@ const testimonials = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative text-white py-20 px-4 overflow-hidden">
-        <Image
-          src="/images/yard-trucks.jpeg"
-          alt="All Recycling Leaders yard — trucks being weighed at our Solandpark facility"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-[var(--color-green-primary)]/80" />
-        <div className="relative max-w-4xl mx-auto text-center">
-          <h1
-            className="text-4xl md:text-6xl font-bold leading-tight mb-4"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            Turning Waste Into Opportunity
-          </h1>
-          <p className="text-xl text-green-100 max-w-2xl mx-auto mb-8">
-            Sedibeng&apos;s trusted scrap metal buyer and recycling partner since 2017
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/sell-scrap"
-              className="px-8 py-3 bg-white text-[var(--color-green-primary)] font-bold rounded-lg hover:bg-green-50 transition-colors"
-            >
-              Get a Price
-            </Link>
-            <Link
-              href="/contact"
-              className="px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors"
-            >
-              Request a Quote
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel />
+      <PartnersMarquee />
 
       {/* Audience Lane Cards */}
       <section className="max-w-6xl mx-auto px-4 py-16">
