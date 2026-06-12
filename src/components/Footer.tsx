@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ARLLogo from "./ARLLogo";
+import Image from "next/image";
 import { locations } from "@/lib/locations";
 
 const quickLinks = [
@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand */}
         <div>
-          <ARLLogo className="h-10 w-auto mb-3 brightness-0 invert" />
+          <Image src="/images/ARL-logo-diamond-white.png" alt="All Recycling Leaders" height={40} width={220} className="h-10 w-auto mb-3" />
           <p className="text-sm leading-relaxed mt-2">
             Sedibeng&apos;s trusted scrap metal buyer and recycling partner since 2017.
           </p>
