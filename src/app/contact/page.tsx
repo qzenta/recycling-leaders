@@ -29,7 +29,7 @@ const contactCards = [
   {
     icon: "🕐",
     label: "Operating Hours",
-    value: "Mon–Sat · Hours TBC",
+    value: "Mon–Fri 8am–5pm · Sat 8am–1pm",
     href: null,
   },
 ];
