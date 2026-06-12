@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { locations } from "@/lib/locations";
 import ContactForm from "@/components/ContactForm";
+import PageHero from "@/components/PageHero";
 
 export function generateStaticParams() {
   return locations.map((l) => ({ slug: l.slug }));
@@ -45,21 +46,12 @@ export default async function LocationPage({
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-[var(--color-green-primary)] text-white py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1
-            className="text-3xl md:text-5xl font-bold leading-tight mb-4"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            We Buy Scrap Metal in {loc.name}
-          </h1>
-          <p className="text-lg md:text-xl text-green-100 max-w-2xl mx-auto">
-            Serving {loc.name} and surrounding Vaal communities — bring your scrap to our Solandpark yard.
-            Fair prices, accurate weighing, fast payment.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        headline={`We Buy Scrap Metal in ${loc.name}`}
+        subheadline={`Serving ${loc.name} and surrounding Vaal communities — bring your scrap to our Solandpark yard. Fair prices, accurate weighing, fast payment.`}
+        image="/images/yard-trucks.jpeg"
+        imageAlt={`ARL scrap yard serving ${loc.name}`}
+      />
 
       {/* What We Buy */}
       <section className="max-w-6xl mx-auto px-4 py-14">

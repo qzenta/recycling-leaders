@@ -33,19 +33,22 @@ export default function SellScrapPage() {
       <PageHero
         headline="We Buy All Scrap Metal — Fast &amp; Fair"
         subheadline="Accurate weighing, fair market prices, and same-day payment in Sedibeng and the Vaal region."
+        image="/images/yard-weighbridge.jpeg"
+        imageAlt="ARL weighbridge at the Solandpark yard"
       />
 
-      {/* Yard photo strip */}
-      <div className="relative w-full h-56 md:h-72 overflow-hidden">
-        <Image
-          src="/images/truck-skip-weighbridge.jpeg"
-          alt="Skip truck being weighed at ARL's Solandpark yard"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/20" />
+      {/* Photo strip */}
+      <div className="grid grid-cols-3 gap-1 w-full">
+        {[
+          { src: "/images/operations-crane-scrap-1.jpeg", alt: "Crane lifting scrap metal at ARL" },
+          { src: "/images/truck-skip-weighbridge.jpeg",   alt: "Skip truck on the weighbridge" },
+          { src: "/images/fleet-trucks-yard-1.jpeg",      alt: "ARL collection fleet at the yard" },
+        ].map((img) => (
+          <div key={img.src} className="relative h-48 md:h-64 overflow-hidden">
+            <Image src={img.src} alt={img.alt} fill className="object-cover" sizes="33vw" />
+            <div className="absolute inset-0 bg-black/10" />
+          </div>
+        ))}
       </div>
 
       {/* Metals We Buy */}

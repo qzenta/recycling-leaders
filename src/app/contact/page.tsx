@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Contact ARL — All Recycling Leaders Vaal",
@@ -37,19 +38,12 @@ const contactCards = [
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-[var(--color-green-primary)] text-white py-14 px-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <h1
-            className="text-4xl font-bold mb-2"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            Get In Touch
-          </h1>
-          <p className="text-green-100">
-            WhatsApp, call, or fill in the form — we respond fast.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        headline="Get In Touch"
+        subheadline="WhatsApp, call, or fill in the form — we respond fast."
+        image="/images/yard-weighbridge.jpeg"
+        imageAlt="The ARL yard in Solandpark"
+      />
 
       {/* Contact Cards */}
       <section className="max-w-4xl mx-auto px-4 py-12">

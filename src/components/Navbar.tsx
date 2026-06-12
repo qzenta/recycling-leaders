@@ -8,6 +8,7 @@ const links = [
   { href: "/sell-scrap", label: "Sell Scrap" },
   { href: "/recycling-partners", label: "Partners" },
   { href: "/bin-collection", label: "Bin Collection" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];

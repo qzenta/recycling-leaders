@@ -45,6 +45,8 @@ export default function RecyclingPartnersPage() {
       <PageHero
         headline="Your Reliable Recycling Supply Partner"
         subheadline="Consistent ferrous and non-ferrous scrap metal volumes from Sedibeng's established sourcing network."
+        image="/images/yard-trucks.jpeg"
+        imageAlt="Trucks at the ARL recycling yard"
       />
 
       {/* What We Offer */}
