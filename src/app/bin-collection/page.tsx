@@ -36,6 +36,8 @@ export default function BinCollectionPage() {
       <PageHero
         headline="Hassle-Free Monthly Bin Collection"
         subheadline="We handle the waste so you can focus on your business. Sedibeng and Vaal region."
+        image="/images/truck-skip-weighbridge.jpeg"
+        imageAlt="ARL skip truck on the weighbridge"
       />
 
       {/* Yard photo strip */}

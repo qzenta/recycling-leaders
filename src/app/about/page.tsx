@@ -35,7 +35,11 @@ const stats = [
 export default function AboutPage() {
   return (
     <>
-      <PageHero headline="Proudly Serving the Vaal Since 2017" />
+      <PageHero
+        headline="Proudly Serving the Vaal Since 2017"
+        image="/images/yard-trucks.jpeg"
+        imageAlt="Trucks at the ARL recycling yard"
+      />
 
       {/* Our Story */}
       <section className="max-w-6xl mx-auto px-4 py-16">
@@ -124,24 +128,62 @@ export default function AboutPage() {
 
       {/* Team */}
       <section className="bg-white py-14 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto">
           <h2
-            className="text-3xl font-bold mb-8 text-[var(--color-grey-darkest)]"
+            className="text-3xl font-bold text-center mb-8 text-[var(--color-grey-darkest)]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            The Team
+            Our Team
           </h2>
-          <div className="inline-block">
-            <div className="bg-[var(--color-grey-border)] rounded-full w-32 h-32 flex items-center justify-center text-[var(--color-grey-muted)] text-xs mx-auto mb-4">
-              [Photo: Client to supply]
+          <div className="grid sm:grid-cols-2 gap-6 mb-8">
+            <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
+              <Image
+                src="/images/team-owner-staff-1.jpeg"
+                alt="ARL owner and team at the Solandpark yard"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
-            <div className="font-bold text-[var(--color-grey-darkest)]">Owner / Director</div>
-            <div className="text-sm text-[var(--color-grey-muted)] mt-1">All Recycling Leaders</div>
-            <p className="text-sm text-[var(--color-grey-muted)] mt-3 max-w-sm">
-              [Bio: Client to supply]
-            </p>
+            <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
+              <Image
+                src="/images/team-owner-staff-6.jpeg"
+                alt="ARL team in uniform at the weighbridge"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+          <p className="text-center text-[var(--color-grey-muted)] text-sm">
+            Our team of dedicated staff operates the yard 6 days a week — keeping Sedibeng&apos;s scrap moving.
+          </p>
+        </div>
+      </section>
+
+      {/* Community */}
+      <section className="max-w-5xl mx-auto px-4 py-14">
+        <h2
+          className="text-3xl font-bold text-center mb-8 text-[var(--color-grey-darkest)]"
+          style={{ fontFamily: "var(--font-heading)" }}
+        >
+          Giving Back to the Community
+        </h2>
+        <div className="grid sm:grid-cols-3 gap-4 mb-6">
+          <div className="relative rounded-xl overflow-hidden aspect-video">
+            <Image src="/images/csr-community-parcels-1.jpeg" alt="ARL food parcel donation to the community" fill className="object-cover" sizes="33vw" />
+          </div>
+          <div className="relative rounded-xl overflow-hidden aspect-video">
+            <Image src="/images/csr-community-parcels-2.jpeg" alt="ARL giving back — food parcels for Vaal families" fill className="object-cover" sizes="33vw" />
+          </div>
+          <div className="relative rounded-xl overflow-hidden aspect-video">
+            <Image src="/images/csr-community-children.jpeg" alt="ARL community support for children in Sedibeng" fill className="object-cover" sizes="33vw" />
           </div>
         </div>
+        <p className="text-center text-[var(--color-grey-muted)] text-sm max-w-2xl mx-auto">
+          We believe recycling creates more than economic value — it creates community. ARL actively gives back
+          to the Vaal and Sedibeng communities through food parcel donations and local support initiatives.
+        </p>
       </section>
 
       {/* Accreditations */}
