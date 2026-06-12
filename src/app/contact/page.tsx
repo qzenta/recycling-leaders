@@ -110,7 +110,7 @@ export default function ContactPage() {
         </h2>
         <div className="rounded-xl overflow-hidden shadow-sm aspect-video">
           <iframe
-            src="https://www.google.com/maps/embed/v1/place?key=REDACTED_GOOGLE_MAPS_KEY_OLD&q=594C+Houtkop+Road,Solandpark,Sedibeng"
+            src="https://www.google.com/maps/embed/v1/place?key=REDACTED_GOOGLE_MAPS_KEY&q=594C+Houtkop+Road,Solandpark,Sedibeng"
             width="100%"
             height="100%"
             style={{ border: 0 }}
