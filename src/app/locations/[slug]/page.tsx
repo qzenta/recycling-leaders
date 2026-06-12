@@ -125,7 +125,7 @@ export default async function LocationPage({
             </div>
             <div className="rounded-xl overflow-hidden shadow-sm aspect-video">
               <iframe
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-placeholder&q=594C+Houtkop+Road,Solandpark,Sedibeng"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDXrRZrXffB1ECEWSRgeS8YE5dE2pBqOZE&q=594C+Houtkop+Road,Solandpark,Sedibeng"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
