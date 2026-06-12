@@ -56,15 +56,21 @@ export default function GalleryPage() {
       <section className="max-w-6xl mx-auto px-4 py-8">
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
           {photos.map((p) => (
-            <div key={p.src} className="break-inside-avoid rounded-xl overflow-hidden shadow-sm relative group">
+            <div key={p.src} className="break-inside-avoid rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
               <Image
                 src={p.src}
                 alt={p.alt}
                 width={800}
                 height={600}
-                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
+              {/* Hover overlay */}
+              <div className="absolute inset-0 bg-[var(--color-green-primary)]/0 group-hover:bg-[var(--color-green-primary)]/30 transition-all duration-500 ease-out" />
+              {/* Caption on hover */}
+              <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out bg-gradient-to-t from-black/70 to-transparent px-4 py-4">
+                <p className="text-white text-xs font-medium leading-snug">{p.alt}</p>
+              </div>
               <div className="absolute top-3 left-3">
                 <span className="px-2.5 py-1 bg-[var(--color-green-primary)]/90 text-white text-xs font-semibold rounded-full">
                   {p.category}
