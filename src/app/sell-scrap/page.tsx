@@ -153,7 +153,7 @@ export default function SellScrapPage() {
             </div>
             <div className="bg-[var(--color-green-light)] rounded-xl p-4">
               <div className="font-semibold text-[var(--color-grey-dark)] mb-1">🕐 Hours</div>
-              <div>Monday – Saturday<br />Operating hours: TBC</div>
+              <div>Mon–Fri: 8:00am – 5:00pm<br />Saturday: 8:00am – 1:00pm</div>
             </div>
           </div>
         </div>
