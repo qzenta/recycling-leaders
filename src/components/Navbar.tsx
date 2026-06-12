@@ -18,9 +18,9 @@ export default function Navbar() {
 
   return (
     <header className="bg-white border-b border-[var(--color-grey-border)] sticky top-0 z-40">
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-18">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/images/ARL-logo-diamond.png" alt="All Recycling Leaders" height={40} width={220} className="h-10 w-auto" priority />
+          <Image src="/images/ARL-logo-diamond.png" alt="All Recycling Leaders" height={52} width={280} className="h-13 w-auto" priority />
         </Link>
 
         {/* Desktop nav */}
