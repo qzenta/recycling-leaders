@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import ARLLogo from "./ARLLogo";
 
 const links = [
   { href: "/sell-scrap", label: "Sell Scrap" },
@@ -19,7 +19,7 @@ export default function Navbar() {
     <header className="bg-white border-b border-[var(--color-grey-border)] sticky top-0 z-40">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2">
-          <ARLLogo className="h-9 w-auto" />
+          <Image src="/images/ARL-logo-diamond.png" alt="All Recycling Leaders" height={40} width={220} className="h-10 w-auto" priority />
         </Link>
 
         {/* Desktop nav */}
