@@ -8,6 +8,7 @@ const quickLinks = [
   { href: "/bin-collection", label: "Bin Collection" },
   { href: "/gallery", label: "Gallery" },
   { href: "/about", label: "About ARL" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
 
