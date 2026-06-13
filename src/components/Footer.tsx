@@ -92,7 +92,17 @@ export default function Footer() {
 
       <div className="max-w-6xl mx-auto px-4 mt-6 pt-6 border-t border-gray-700 text-xs text-gray-500 flex flex-col md:flex-row justify-between gap-2">
         <span>© 2026 All Recycling Leaders</span>
-        <span>recyclingleaders.co.za</span>
+        <span>
+          Powered by{" "}
+          <a
+            href="https://qzenta.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white transition-colors font-medium"
+          >
+            Qzenta
+          </a>
+        </span>
       </div>
     </footer>
   );
