@@ -48,7 +48,7 @@ export default async function LocationPage({
     <>
       <PageHero
         headline={`We Buy Scrap Metal in ${loc.name}`}
-        subheadline={`Serving ${loc.name} and surrounding Vaal communities — bring your scrap to our Solandpark yard. Fair prices, accurate weighing, fast payment.`}
+        subheadline={`Serving ${loc.name} and surrounding Vaal communities — bring your scrap to our Vanderbijlpark yard. Fair prices, accurate weighing, fast payment.`}
         image="/images/yard-trucks.jpeg"
         imageAlt={`ARL scrap yard serving ${loc.name}`}
       />
@@ -91,11 +91,11 @@ export default async function LocationPage({
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="space-y-4 text-[var(--color-grey-muted)]">
               <p>
-                Our yard is located at <strong className="text-[var(--color-grey-dark)]">594C Houtkop Road, Skipper Botha, Solandpark, Sedibeng</strong> —
+                Our yard is located at <strong className="text-[var(--color-grey-dark)]">74 Fairbank Street, Vanderbijlpark, Gauteng</strong> —
                 approximately <strong className="text-[var(--color-green-primary)]">{loc.distance}</strong> from {loc.name}.
               </p>
               <p>
-                Head towards Solandpark on the R59 / N1 corridor. We&apos;re easy to find and open
+                Head towards Vanderbijlpark on the R59 / N1 corridor. We&apos;re easy to find and open
                 Monday to Saturday. No appointment needed — just pull in with your scrap.
               </p>
               <div className="flex gap-3 flex-wrap mt-4">
@@ -117,7 +117,7 @@ export default async function LocationPage({
             </div>
             <div className="rounded-xl overflow-hidden shadow-sm aspect-video">
               <iframe
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDXrRZrXffB1ECEWSRgeS8YE5dE2pBqOZE&q=594C+Houtkop+Road,Solandpark,Sedibeng"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAJFakbESf2xcpUGTBYpm-s2HW5Np07HXQ&q=74+Fairbank+Street,Vanderbijlpark,Gauteng,1911,South+Africa"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -135,7 +135,7 @@ export default async function LocationPage({
       <section className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-[var(--color-green-light)] border border-[var(--color-green-mid)] rounded-xl p-5 text-center">
           <p className="text-[var(--color-green-primary)] font-semibold">
-            📍 {loc.name} is approximately <strong>{loc.distance}</strong> from our yard at Solandpark, Sedibeng.
+            📍 {loc.name} is approximately <strong>{loc.distance}</strong> from our yard at Vanderbijlpark, Gauteng.
           </p>
         </div>
       </section>
@@ -205,10 +205,10 @@ export default async function LocationPage({
             telephone: "+27164231299",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "594C Houtkop Road, Skipper Botha",
-              addressLocality: "Solandpark",
-              addressRegion: "Sedibeng",
-              postalCode: "1900",
+              streetAddress: "74 Fairbank Street",
+              addressLocality: "Vanderbijlpark",
+              addressRegion: "Gauteng",
+              postalCode: "1911",
               addressCountry: "ZA",
             },
             areaServed: [loc.name, "Sedibeng", "Vaal", "Gauteng"],

@@ -24,8 +24,8 @@ const contactCards = [
   {
     icon: "📍",
     label: "Address",
-    value: "594C Houtkop Road, Skipper Botha, Solandpark, Sedibeng, 1900",
-    href: "https://maps.google.com/?q=594C+Houtkop+Road,Solandpark,Sedibeng",
+    value: "74 Fairbank Street, Vanderbijlpark, Gauteng, 1911",
+    href: "https://maps.google.com/?q=74+Fairbank+Street,Vanderbijlpark,Gauteng,1911,South+Africa",
   },
   {
     icon: "🕐",
@@ -110,7 +110,7 @@ export default function ContactPage() {
         </h2>
         <div className="rounded-xl overflow-hidden shadow-sm aspect-video">
           <iframe
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAJFakbESf2xcpUGTBYpm-s2HW5Np07HXQ&q=594C+Houtkop+Road,Solandpark,Sedibeng"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAJFakbESf2xcpUGTBYpm-s2HW5Np07HXQ&q=74+Fairbank+Street,Vanderbijlpark,Gauteng,1911,South+Africa"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -133,10 +133,10 @@ export default function ContactPage() {
             telephone: "+27720800327",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "594C Houtkop Road, Skipper Botha",
-              addressLocality: "Solandpark",
-              addressRegion: "Sedibeng",
-              postalCode: "1900",
+              streetAddress: "74 Fairbank Street",
+              addressLocality: "Vanderbijlpark",
+              addressRegion: "Gauteng",
+              postalCode: "1911",
               addressCountry: "ZA",
             },
           }),

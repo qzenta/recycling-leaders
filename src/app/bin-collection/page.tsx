@@ -44,7 +44,7 @@ export default function BinCollectionPage() {
       <div className="relative w-full h-56 md:h-72 overflow-hidden">
         <Image
           src="/images/truck-bin-yard.jpeg"
-          alt="ARL collection truck with bin at the Solandpark yard warehouse"
+          alt="ARL collection truck with bin at the Vanderbijlpark yard warehouse"
           fill
           priority
           className="object-cover object-center"

@@ -34,8 +34,8 @@ const media: { src: string; alt: string; category: string; type: "image" | "vide
   { src: "/images/truck-skip-weighbridge.jpeg",   alt: "Skip truck being weighed at ARL",                 category: "Fleet",      type: "image" },
   { src: "/images/truck-bin-yard.jpeg",           alt: "Bin collection truck at the ARL yard",            category: "Fleet",      type: "image" },
   { src: "/images/yard-trucks.jpeg",              alt: "Trucks lined up at the ARL recycling yard",       category: "Yard",       type: "image" },
-  { src: "/images/yard-weighbridge.jpeg",         alt: "Weighbridge at the ARL Solandpark yard",          category: "Yard",       type: "image" },
-  { src: "/images/team-owner-staff-1.jpeg",       alt: "ARL owner and team at the Solandpark yard",       category: "Team",       type: "image" },
+  { src: "/images/yard-weighbridge.jpeg",         alt: "Weighbridge at the ARL Vanderbijlpark yard",          category: "Yard",       type: "image" },
+  { src: "/images/team-owner-staff-1.jpeg",       alt: "ARL owner and team at the Vanderbijlpark yard",       category: "Team",       type: "image" },
   { src: "/images/team-owner-staff-2.jpeg",       alt: "ARL team in green overalls at the yard",          category: "Team",       type: "image" },
   { src: "/images/team-owner-staff-3.jpeg",       alt: "ARL management and staff team photo",             category: "Team",       type: "image" },
   { src: "/images/team-owner-staff-6.jpeg",       alt: "ARL team at the weighbridge",                     category: "Team",       type: "image" },
@@ -126,7 +126,7 @@ export default function GalleryPage() {
         <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: "var(--font-heading)" }}>
           Ready to bring your scrap?
         </h2>
-        <p className="text-green-100 mb-6">Come see the yard for yourself — Solandpark, Sedibeng.</p>
+        <p className="text-green-100 mb-6">Come see the yard for yourself — Vanderbijlpark, Gauteng.</p>
         <a
           href="https://wa.me/27720800327?text=Hi%20ARL%2C%20I%20want%20to%20visit%20the%20yard"
           target="_blank"
