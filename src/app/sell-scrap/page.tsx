@@ -22,7 +22,7 @@ const metals = [
 ];
 
 const steps = [
-  { num: "1", label: "Bring your scrap", desc: "Drive to our yard at 594C Houtkop Road, Solandpark, Sedibeng." },
+  { num: "1", label: "Bring your scrap", desc: "Drive to our yard at 74 Fairbank Street, Vanderbijlpark, Gauteng, 1911." },
   { num: "2", label: "We weigh accurately", desc: "We use calibrated scales — fair, transparent weighing every time." },
   { num: "3", label: "You get paid", desc: "Same-day cash or EFT payment. No delays, no hassle." },
 ];
@@ -34,7 +34,7 @@ export default function SellScrapPage() {
         headline="We Buy All Scrap Metal — Fast &amp; Fair"
         subheadline="Accurate weighing, fair market prices, and same-day payment in Sedibeng and the Vaal region."
         image="/images/yard-weighbridge.jpeg"
-        imageAlt="ARL weighbridge at the Solandpark yard"
+        imageAlt="ARL weighbridge at the Vanderbijlpark yard"
       />
 
       {/* Photo strip */}
@@ -139,7 +139,7 @@ export default function SellScrapPage() {
           </h2>
           <div className="rounded-xl overflow-hidden shadow-sm mb-6 aspect-video">
             <iframe
-              src="https://www.google.com/maps/embed/v1/place?key=REDACTED_GOOGLE_MAPS_KEY_OLD&q=594C+Houtkop+Road,Solandpark,Sedibeng"
+              src="https://www.google.com/maps/embed/v1/place?key=REDACTED_GOOGLE_MAPS_KEY&q=74+Fairbank+Street,Vanderbijlpark,Gauteng,1911,South+Africa"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -152,7 +152,7 @@ export default function SellScrapPage() {
           <div className="grid sm:grid-cols-2 gap-4 text-sm text-[var(--color-grey-muted)]">
             <div className="bg-[var(--color-green-light)] rounded-xl p-4">
               <div className="font-semibold text-[var(--color-grey-dark)] mb-1">📍 Address</div>
-              <div>594C Houtkop Road, Skipper Botha<br />Solandpark, Sedibeng, 1900</div>
+              <div>74 Fairbank Street<br />Vanderbijlpark, Gauteng, 1911</div>
             </div>
             <div className="bg-[var(--color-green-light)] rounded-xl p-4">
               <div className="font-semibold text-[var(--color-grey-dark)] mb-1">🕐 Hours</div>

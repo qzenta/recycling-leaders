@@ -71,7 +71,7 @@ export default function AboutPage() {
           <div className="relative rounded-xl overflow-hidden aspect-video">
             <Image
               src="/images/yard-weighbridge.jpeg"
-              alt="All Recycling Leaders yard — trucks lined up on the weighbridge at our Solandpark facility"
+              alt="All Recycling Leaders yard — trucks lined up on the weighbridge at our Vanderbijlpark facility"
               fill
               className="object-cover object-center"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -139,7 +139,7 @@ export default function AboutPage() {
             <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
               <Image
                 src="/images/team-owner-staff-1.jpeg"
-                alt="ARL owner and team at the Solandpark yard"
+                alt="ARL owner and team at the Vanderbijlpark yard"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 50vw"

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const slides = [
-  { src: "/images/yard-trucks.jpeg",              alt: "All Recycling Leaders yard — trucks at our Solandpark facility" },
+  { src: "/images/yard-trucks.jpeg",              alt: "All Recycling Leaders yard — trucks at our Vanderbijlpark facility" },
   { src: "/images/operations-crane-scrap-1.jpeg", alt: "Crane operations at the ARL scrap yard" },
   { src: "/images/fleet-trucks-yard-1.jpeg",      alt: "ARL collection fleet ready for service" },
 ];

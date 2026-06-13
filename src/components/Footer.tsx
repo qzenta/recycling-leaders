@@ -67,8 +67,8 @@ export default function Footer() {
               </a>
             </li>
             <li className="leading-relaxed">
-              📍 594C Houtkop Road, Skipper Botha,<br />
-              Solandpark, Sedibeng, 1900
+              📍 74 Fairbank Street,<br />
+              Vanderbijlpark, Gauteng, 1911
             </li>
           </ul>
         </div>
