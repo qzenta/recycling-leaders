@@ -40,16 +40,13 @@ export default function Navbar() {
             onMouseLeave={() => setServicesOpen(false)}
           >
             <button
-              className={`flex items-center gap-1 hover:text-[var(--color-green-primary)] transition-colors ${isServicesActive ? "text-[var(--color-green-primary)]" : ""}`}
+              className={`flex items-center hover:text-[var(--color-green-primary)] transition-colors pb-2 ${isServicesActive ? "text-[var(--color-green-primary)]" : ""}`}
             >
               Services
-              <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
             </button>
 
             {servicesOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white rounded-xl shadow-lg border border-[var(--color-grey-border)] overflow-hidden">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-72 bg-white rounded-xl shadow-lg border border-[var(--color-grey-border)] overflow-hidden">
                 {servicesItems.map((item) => (
                   <Link
                     key={item.href}
