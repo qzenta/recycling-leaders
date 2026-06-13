@@ -27,6 +27,11 @@ export const metadata: Metadata = {
     siteName: "All Recycling Leaders",
     locale: "en_ZA",
     type: "website",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630, alt: "All Recycling Leaders — Turning Waste Into Opportunity" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/og-default.jpg"],
   },
 };
 

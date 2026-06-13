@@ -195,11 +195,11 @@ export default function AboutPage() {
           Accreditations
         </h2>
         <div className="flex flex-wrap justify-center gap-6">
-          <div className="bg-[var(--color-grey-border)] rounded-xl px-8 py-4 text-[var(--color-grey-muted)] text-sm">
-            [B-BBEE Certificate — client to supply]
-          </div>
-          <div className="bg-[var(--color-grey-border)] rounded-xl px-8 py-4 text-[var(--color-grey-muted)] text-sm">
-            [MRA / Industry Logo — if applicable]
+          <div className="bg-[var(--color-green-light)] border border-[var(--color-green-mid)] rounded-xl px-8 py-6 text-center max-w-xs">
+            <div className="text-3xl mb-2">🏅</div>
+            <div className="font-bold text-[var(--color-green-primary)] text-lg mb-1">B-BBEE Level 1</div>
+            <p className="text-sm text-[var(--color-grey-muted)]">All Recycling Leaders is a Level 1 B-BBEE contributor.</p>
+            <p className="text-xs text-[var(--color-grey-muted)] mt-2">Certificate available on request.</p>
           </div>
         </div>
       </section>
