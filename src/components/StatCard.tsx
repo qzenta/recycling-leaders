@@ -26,7 +26,7 @@ export default function StatCard({ stat, label, delay = 0 }: Props) {
   return (
     <div
       ref={ref}
-      className="bg-white rounded-2xl shadow-lg p-5 text-center border-t-4 border-[var(--color-green-primary)] transition-all duration-500"
+      className="card-lift bg-white rounded-2xl shadow-lg p-5 text-center border-t-4 border-[var(--color-green-primary)] transition-all duration-500"
       style={{
         transitionDelay: `${delay}ms`,
         opacity: visible ? 1 : 0,
