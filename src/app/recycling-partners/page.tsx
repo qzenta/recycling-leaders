@@ -28,7 +28,7 @@ const materials = [
   },
   {
     category: "Mixed Scrap",
-    items: "E-Waste, Car Batteries, Mixed Metal Lots",
+    items: "E-Waste, Scrap Batteries, Mixed Metal Lots",
     desc: "Flexible mixed loads for processors who handle multiple streams.",
   },
 ];

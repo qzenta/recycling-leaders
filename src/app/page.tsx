@@ -4,6 +4,7 @@ import Link from "next/link";
 import HeroCarousel from "@/components/HeroCarousel";
 import PartnersMarquee from "@/components/PartnersMarquee";
 import FadeIn from "@/components/FadeIn";
+import StatCard from "@/components/StatCard";
 import { localBusiness, organization } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -46,11 +47,8 @@ export default function HomePage() {
       {/* Stats cards — overlap hero bottom edge */}
       <div className="relative z-10 px-4 -mt-12 mb-0">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-          {stats.map((s) => (
-            <div key={s.label} className="bg-white rounded-2xl shadow-lg p-5 text-center border-t-4 border-[var(--color-green-primary)]">
-              <div className="text-2xl font-bold text-[var(--color-green-primary)]" style={{ fontFamily: "var(--font-heading)" }}>{s.stat}</div>
-              <div className="text-xs text-[var(--color-grey-muted)] uppercase tracking-wide mt-1">{s.label}</div>
-            </div>
+          {stats.map((s, i) => (
+            <StatCard key={s.label} stat={s.stat} label={s.label} delay={i * 100} />
           ))}
         </div>
       </div>
