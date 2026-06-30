@@ -15,25 +15,25 @@ const partners = [
 
 export default function PartnersMarquee() {
   return (
-    <section className="bg-white border-y border-[var(--color-grey-border)] py-8 overflow-hidden">
-      <p className="text-center text-xs font-semibold uppercase tracking-widest text-[var(--color-grey-muted)] mb-6">
+    <section className="bg-white border-y border-[var(--color-grey-border)] py-10 overflow-hidden">
+      <p className="text-center text-xs font-semibold uppercase tracking-widest text-[var(--color-grey-muted)] mb-8">
         Industry Partners &amp; Associations
       </p>
-      <div className="relative flex">
-        <div className="flex animate-marquee gap-10 whitespace-nowrap items-center">
+      <div className="relative flex group">
+        <div className="flex gap-8 whitespace-nowrap items-center animate-marquee group-hover:[animation-play-state:paused]">
           {[...partners, ...partners].map((p, i) => (
             <div
               key={i}
-              className="flex items-center justify-center flex-shrink-0"
-              style={{ minWidth: "120px", height: "56px" }}
+              className="flex items-center justify-center flex-shrink-0 transition-transform duration-300 hover:scale-110"
+              style={{ minWidth: "140px", height: "72px" }}
             >
               <Image
                 src={p.logo}
                 alt={p.name}
-                width={120}
-                height={48}
-                className="object-contain max-h-10 w-auto"
-                style={{ filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.18))", mixBlendMode: "multiply" }}
+                width={140}
+                height={56}
+                className="object-contain max-h-14 w-auto"
+                style={{ filter: "drop-shadow(0 1px 4px rgba(0,0,0,0.15))", mixBlendMode: "multiply" }}
               />
             </div>
           ))}
