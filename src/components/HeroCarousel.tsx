@@ -77,16 +77,16 @@ export default function HeroCarousel() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
           {slide.cta2.wa ? (
-            <a href={slide.cta1.href} className="px-8 py-3.5 bg-[var(--color-green-primary)] text-white font-bold rounded-lg hover:bg-[var(--color-green-mid)] transition-colors text-sm">
+            <a href={slide.cta1.href} className="btn-lift px-8 py-3.5 bg-[var(--color-green-primary)] text-white font-bold rounded-lg hover:bg-[var(--color-green-mid)] text-sm">
               {slide.cta1.label}
             </a>
           ) : (
-            <Link href={slide.cta1.href} className="px-8 py-3.5 bg-[var(--color-green-primary)] text-white font-bold rounded-lg hover:bg-[var(--color-green-mid)] transition-colors text-sm">
+            <Link href={slide.cta1.href} className="btn-lift px-8 py-3.5 bg-[var(--color-green-primary)] text-white font-bold rounded-lg hover:bg-[var(--color-green-mid)] text-sm">
               {slide.cta1.label}
             </Link>
           )}
           {slide.cta2.wa ? (
-            <a href={slide.cta2.href} target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 bg-[#25D366] text-white font-bold rounded-lg hover:bg-[#1ebe5a] transition-colors text-sm">
+            <a href={slide.cta2.href} target="_blank" rel="noopener noreferrer" className="btn-lift px-8 py-3.5 bg-[#25D366] text-white font-bold rounded-lg hover:bg-[#1ebe5a] text-sm">
               {slide.cta2.label}
             </a>
           ) : (

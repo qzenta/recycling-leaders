@@ -62,7 +62,7 @@ export default function SellScrapPage() {
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {metals.map((m) => (
-            <div key={m.name} className="bg-white rounded-xl p-5 shadow-sm flex gap-4 items-start">
+            <div key={m.name} className="card-lift bg-white rounded-xl p-5 shadow-sm flex gap-4 items-start">
               <span className="text-3xl">{m.icon}</span>
               <div>
                 <div className="font-bold text-[var(--color-grey-darkest)]">{m.name}</div>

@@ -67,7 +67,7 @@ export default function HomePage() {
               { img: "/images/operations-crane-scrap-2.jpeg", title: "Recycling Partners", desc: "Consistent ferrous and non-ferrous supply for foundries, processors, and industrial buyers.",             href: "/recycling-partners", cta: "Partner With Us" },
             ].map((card) => (
               <Link key={card.href} href={card.href}
-                className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+                className="card-lift group relative rounded-2xl overflow-hidden shadow-md"
                 style={{ minHeight: "340px" }}>
                 <Image src={card.img} alt={card.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
@@ -93,7 +93,7 @@ export default function HomePage() {
           <p className="text-center text-[var(--color-grey-muted)] mb-10 text-sm">Built on trust, transparency, and community</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyUs.map((w) => (
-              <div key={w.title} className="bg-white rounded-2xl p-6 shadow-sm border border-[var(--color-grey-border)] hover:border-[var(--color-green-mid)] transition-colors">
+              <div key={w.title} className="card-lift bg-white rounded-2xl p-6 shadow-sm border border-[var(--color-grey-border)] hover:border-[var(--color-green-mid)]">
                 <div className="text-3xl mb-3">{w.icon}</div>
                 <h3 className="font-bold text-[var(--color-grey-darkest)] mb-2" style={{ fontFamily: "var(--font-heading)" }}>{w.title}</h3>
                 <p className="text-sm text-[var(--color-grey-muted)] leading-relaxed">{w.desc}</p>
@@ -162,7 +162,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link href="/sell-scrap" className="inline-block px-8 py-3 bg-[var(--color-green-primary)] text-white font-bold rounded-lg hover:bg-[var(--color-green-mid)] transition-colors">
+            <Link href="/sell-scrap" className="btn-lift inline-block px-8 py-3 bg-[var(--color-green-primary)] text-white font-bold rounded-lg hover:bg-[var(--color-green-mid)]">
               See All Metals &amp; Get a Price
             </Link>
           </div>
