@@ -10,7 +10,7 @@ const faqs: { category: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "Where is ARL located?",
-        a: "Our yard is at 74 Fairbank Street, Vanderbijlpark, Gauteng, 1911. We are open Monday to Friday 08:00–17:00 and Saturday 08:00–13:00.",
+        a: "Our yard is at 74 Fairbanks Street, Vanderbijlpark, Gauteng, 1911. We are open Monday to Friday 08:00–17:00 and Saturday 08:00–13:00.",
       },
       {
         q: "How do I contact ARL?",

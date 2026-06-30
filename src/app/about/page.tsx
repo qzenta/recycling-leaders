@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "About All Recycling Leaders — Est. 2017, Vaal Region",
@@ -9,27 +10,15 @@ export const metadata: Metadata = {
 };
 
 const values = [
-  {
-    icon: "🤝",
-    title: "Community First",
-    desc: "We were built in the Vaal and serve the Vaal. Every transaction supports local economic activity.",
-  },
-  {
-    icon: "🌿",
-    title: "Environmental Responsibility",
-    desc: "Recycling done right. All material is processed responsibly, keeping waste out of landfill.",
-  },
-  {
-    icon: "⚖️",
-    title: "Fair & Transparent",
-    desc: "Calibrated scales, documented weights, and honest market prices — every time.",
-  },
+  { icon: "🤝", title: "Community First",            desc: "We were built in the Vaal and serve the Vaal. Every transaction supports local economic activity." },
+  { icon: "🌿", title: "Environmental Responsibility", desc: "Recycling done right. All material is processed responsibly, keeping waste out of landfill." },
+  { icon: "⚖️", title: "Fair & Transparent",          desc: "Calibrated scales, documented weights, and honest market prices — every time." },
 ];
 
 const stats = [
-  { stat: "Est. 2017", label: "Established" },
-  { stat: "3", label: "Service Streams" },
-  { stat: "Vaal & Sedibeng", label: "Region Served" },
+  { stat: "Est. 2017",         label: "Established"    },
+  { stat: "3",                 label: "Service Streams" },
+  { stat: "Vaal & Sedibeng",   label: "Region Served"  },
 ];
 
 export default function AboutPage() {
@@ -37,18 +26,28 @@ export default function AboutPage() {
     <>
       <PageHero
         headline="Proudly Serving the Vaal Since 2017"
+        subheadline="A community-rooted recycling business built on trust, transparency, and fair dealing."
         image="/images/yard-trucks.jpeg"
         imageAlt="Trucks at the ARL recycling yard"
+        tall
       />
 
-      {/* Our Story */}
+      {/* Our Story — cascade left/right */}
       <section className="max-w-6xl mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-10 items-start">
-          <div>
-            <h2
-              className="text-3xl font-bold mb-4 text-[var(--color-grey-darkest)]"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <FadeIn direction="left">
+            <div className="relative rounded-2xl overflow-hidden aspect-video shadow-md">
+              <Image
+                src="/images/yard-weighbridge.jpeg"
+                alt="All Recycling Leaders yard — trucks lined up on the weighbridge at our Vanderbijlpark facility"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </FadeIn>
+          <FadeIn direction="right" delay={150}>
+            <h2 className="text-3xl font-bold mb-4 text-[var(--color-grey-darkest)]" style={{ fontFamily: "var(--font-heading)" }}>
               Our Story
             </h2>
             <div className="space-y-4 text-[var(--color-grey-muted)] leading-relaxed">
@@ -67,37 +66,27 @@ export default function AboutPage() {
                 things the right way. That hasn&apos;t changed since day one.
               </p>
             </div>
-          </div>
-          <div className="relative rounded-xl overflow-hidden aspect-video">
-            <Image
-              src="/images/yard-weighbridge.jpeg"
-              alt="All Recycling Leaders yard — trucks lined up on the weighbridge at our Vanderbijlpark facility"
-              fill
-              className="object-cover object-center"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Values */}
       <section className="bg-white py-14 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2
-            className="text-3xl font-bold text-center mb-8 text-[var(--color-grey-darkest)]"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
+          <h2 className="text-3xl font-bold text-center mb-8 text-[var(--color-grey-darkest)]" style={{ fontFamily: "var(--font-heading)" }}>
             Our Values
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {values.map((v) => (
-              <div key={v.title} className="text-center p-6 bg-[var(--color-green-light)] rounded-xl">
-                <div className="text-4xl mb-3">{v.icon}</div>
-                <h3 className="font-bold text-lg mb-2 text-[var(--color-grey-darkest)]" style={{ fontFamily: "var(--font-heading)" }}>
-                  {v.title}
-                </h3>
-                <p className="text-sm text-[var(--color-grey-muted)]">{v.desc}</p>
-              </div>
+            {values.map((v, i) => (
+              <FadeIn key={v.title} delay={i * 100}>
+                <div className="text-center p-6 bg-[var(--color-green-light)] rounded-xl">
+                  <div className="text-4xl mb-3">{v.icon}</div>
+                  <h3 className="font-bold text-lg mb-2 text-[var(--color-grey-darkest)]" style={{ fontFamily: "var(--font-heading)" }}>
+                    {v.title}
+                  </h3>
+                  <p className="text-sm text-[var(--color-grey-muted)]">{v.desc}</p>
+                </div>
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -105,23 +94,19 @@ export default function AboutPage() {
 
       {/* Impact Counter */}
       <section className="max-w-4xl mx-auto px-4 py-14">
-        <h2
-          className="text-3xl font-bold text-center mb-8 text-[var(--color-grey-darkest)]"
-          style={{ fontFamily: "var(--font-heading)" }}
-        >
+        <h2 className="text-3xl font-bold text-center mb-8 text-[var(--color-grey-darkest)]" style={{ fontFamily: "var(--font-heading)" }}>
           Our Impact
         </h2>
         <div className="grid grid-cols-3 gap-4">
-          {stats.map((s) => (
-            <div key={s.label} className="bg-white rounded-xl p-6 text-center shadow-sm">
-              <div
-                className="text-2xl md:text-3xl font-bold text-[var(--color-green-primary)] mb-1"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                {s.stat}
+          {stats.map((s, i) => (
+            <FadeIn key={s.label} delay={i * 100}>
+              <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+                <div className="text-2xl md:text-3xl font-bold text-[var(--color-green-primary)] mb-1" style={{ fontFamily: "var(--font-heading)" }}>
+                  {s.stat}
+                </div>
+                <div className="text-sm text-[var(--color-grey-muted)]">{s.label}</div>
               </div>
-              <div className="text-sm text-[var(--color-grey-muted)]">{s.label}</div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </section>
@@ -129,31 +114,32 @@ export default function AboutPage() {
       {/* Team */}
       <section className="bg-white py-14 px-4">
         <div className="max-w-5xl mx-auto">
-          <h2
-            className="text-3xl font-bold text-center mb-8 text-[var(--color-grey-darkest)]"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
+          <h2 className="text-3xl font-bold text-center mb-8 text-[var(--color-grey-darkest)]" style={{ fontFamily: "var(--font-heading)" }}>
             Our Team
           </h2>
           <div className="grid sm:grid-cols-2 gap-6 mb-8">
-            <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
-              <Image
-                src="/images/team-owner-staff-1.jpeg"
-                alt="ARL owner and team at the Vanderbijlpark yard"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-            <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
-              <Image
-                src="/images/team-owner-staff-6.jpeg"
-                alt="ARL team in uniform at the weighbridge"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
+            <FadeIn direction="left">
+              <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
+                <Image
+                  src="/images/team-owner-staff-1.jpeg"
+                  alt="ARL owner and team at the Vanderbijlpark yard"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+            </FadeIn>
+            <FadeIn direction="right" delay={150}>
+              <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
+                <Image
+                  src="/images/team-owner-staff-6.jpeg"
+                  alt="ARL team in uniform at the weighbridge"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+            </FadeIn>
           </div>
           <p className="text-center text-[var(--color-grey-muted)] text-sm">
             Our team of dedicated staff operates the yard 6 days a week — keeping Sedibeng&apos;s scrap moving.
@@ -163,22 +149,21 @@ export default function AboutPage() {
 
       {/* Community */}
       <section className="max-w-5xl mx-auto px-4 py-14">
-        <h2
-          className="text-3xl font-bold text-center mb-8 text-[var(--color-grey-darkest)]"
-          style={{ fontFamily: "var(--font-heading)" }}
-        >
+        <h2 className="text-3xl font-bold text-center mb-8 text-[var(--color-grey-darkest)]" style={{ fontFamily: "var(--font-heading)" }}>
           Giving Back to the Community
         </h2>
         <div className="grid sm:grid-cols-3 gap-4 mb-6">
-          <div className="relative rounded-xl overflow-hidden aspect-video">
-            <Image src="/images/csr-community-parcels-1.jpeg" alt="ARL food parcel donation to the community" fill className="object-cover" sizes="33vw" />
-          </div>
-          <div className="relative rounded-xl overflow-hidden aspect-video">
-            <Image src="/images/csr-community-parcels-2.jpeg" alt="ARL giving back — food parcels for Vaal families" fill className="object-cover" sizes="33vw" />
-          </div>
-          <div className="relative rounded-xl overflow-hidden aspect-video">
-            <Image src="/images/csr-community-children.jpeg" alt="ARL community support for children in Sedibeng" fill className="object-cover" sizes="33vw" />
-          </div>
+          {[
+            { src: "/images/csr-community-parcels-1.jpeg", alt: "ARL food parcel donation to the community" },
+            { src: "/images/csr-community-parcels-2.jpeg", alt: "ARL giving back — food parcels for Vaal families" },
+            { src: "/images/csr-community-children.jpeg",  alt: "ARL community support for children in Sedibeng" },
+          ].map((img, i) => (
+            <FadeIn key={img.src} delay={i * 100}>
+              <div className="relative rounded-xl overflow-hidden aspect-video">
+                <Image src={img.src} alt={img.alt} fill className="object-cover" sizes="33vw" />
+              </div>
+            </FadeIn>
+          ))}
         </div>
         <p className="text-center text-[var(--color-grey-muted)] text-sm max-w-2xl mx-auto">
           We believe recycling creates more than economic value — it creates community. ARL actively gives back
@@ -188,19 +173,18 @@ export default function AboutPage() {
 
       {/* Accreditations */}
       <section className="max-w-4xl mx-auto px-4 py-12">
-        <h2
-          className="text-2xl font-bold text-center mb-6 text-[var(--color-grey-darkest)]"
-          style={{ fontFamily: "var(--font-heading)" }}
-        >
+        <h2 className="text-2xl font-bold text-center mb-6 text-[var(--color-grey-darkest)]" style={{ fontFamily: "var(--font-heading)" }}>
           Accreditations
         </h2>
         <div className="flex flex-wrap justify-center gap-6">
-          <div className="bg-[var(--color-green-light)] border border-[var(--color-green-mid)] rounded-xl px-8 py-6 text-center max-w-xs">
-            <div className="text-3xl mb-2">🏅</div>
-            <div className="font-bold text-[var(--color-green-primary)] text-lg mb-1">B-BBEE Level 1</div>
-            <p className="text-sm text-[var(--color-grey-muted)]">All Recycling Leaders is a Level 1 B-BBEE contributor.</p>
-            <p className="text-xs text-[var(--color-grey-muted)] mt-2">Certificate available on request.</p>
-          </div>
+          <FadeIn>
+            <div className="bg-[var(--color-green-light)] border border-[var(--color-green-mid)] rounded-xl px-8 py-6 text-center max-w-xs">
+              <div className="text-3xl mb-2">🏅</div>
+              <div className="font-bold text-[var(--color-green-primary)] text-lg mb-1">B-BBEE Level 1</div>
+              <p className="text-sm text-[var(--color-grey-muted)]">All Recycling Leaders is a Level 1 B-BBEE contributor.</p>
+              <p className="text-xs text-[var(--color-grey-muted)] mt-2">Certificate available on request.</p>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </>

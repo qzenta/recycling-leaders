@@ -1,34 +1,40 @@
+import Image from "next/image";
+
 const partners = [
-  "SAPMA",
-  "Collect-a-Can",
-  "PETCO",
-  "Nampak Recycling",
-  "Hulamin",
-  "SAEWA",
-  "Metal Recyclers SA",
-  "ROSE Foundation",
-  "Averda",
-  "Mpact Recycling",
-  "GreenChoice",
-  "REDISA",
+  { name: "SAPMA",            logo: "/images/sapma.png"       },
+  { name: "PETCO",            logo: "/images/petco.png"       },
+  { name: "Nampak Recycling", logo: "/images/nampak.png"      },
+  { name: "Hulamin",          logo: "/images/hulamin.png"     },
+  { name: "SAEWA",            logo: "/images/saewa.png"       },
+  { name: "ROSE Foundation",  logo: "/images/rose.png"        },
+  { name: "Averda",           logo: "/images/averda.png"      },
+  { name: "Mpact Recycling",  logo: "/images/mpact.png"       },
+  { name: "GreenChoice",      logo: "/images/greenchoice.png" },
+  { name: "REDISA",           logo: "/images/redisa.png"      },
 ];
 
 export default function PartnersMarquee() {
   return (
-    <section className="bg-[var(--color-grey-lightest)] border-y border-[var(--color-grey-border)] py-6 overflow-hidden">
-      <p className="text-center text-xs font-semibold uppercase tracking-widest text-[var(--color-grey-dark)] mb-4">
+    <section className="bg-white border-y border-[var(--color-grey-border)] py-8 overflow-hidden">
+      <p className="text-center text-xs font-semibold uppercase tracking-widest text-[var(--color-grey-muted)] mb-6">
         Industry Partners &amp; Associations
       </p>
       <div className="relative flex">
-        <div className="flex animate-marquee gap-16 whitespace-nowrap">
+        <div className="flex animate-marquee gap-6 whitespace-nowrap">
           {[...partners, ...partners].map((p, i) => (
-            <span
+            <div
               key={i}
-              className="text-sm font-semibold text-[var(--color-green-primary)] flex items-center gap-2"
+              className="flex items-center justify-center gap-3 bg-[var(--color-grey-bg)] border border-[var(--color-grey-border)] rounded-xl px-5 py-3 flex-shrink-0"
+              style={{ minWidth: "160px", height: "72px" }}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-green-primary)] inline-block" />
-              {p}
-            </span>
+              <Image
+                src={p.logo}
+                alt={p.name}
+                width={120}
+                height={48}
+                className="object-contain max-h-10 w-auto"
+              />
+            </div>
           ))}
         </div>
       </div>

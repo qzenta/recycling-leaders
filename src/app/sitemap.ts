@@ -4,7 +4,20 @@ import { locations } from "@/lib/locations";
 const BASE = "https://recyclingleaders.co.za";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const coreRoutes = ["/", "/sell-scrap", "/recycling-partners", "/bin-collection", "/gallery", "/about", "/contact"];
+  const coreRoutes = [
+    "/",
+    "/sell-scrap",
+    "/recycling-partners",
+    "/bin-collection",
+    "/gallery",
+    "/about",
+    "/contact",
+    "/locations",
+    "/faq",
+    "/privacy",
+    "/terms",
+    "/cookies",
+  ];
   const locationRoutes = locations.map((l) => `/locations/${l.slug}`);
 
   return [...coreRoutes, ...locationRoutes].map((route) => ({
