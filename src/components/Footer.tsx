@@ -34,7 +34,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1e2d20] text-gray-400 mt-auto">
+    <footer className="bg-[#152318] text-gray-400 mt-auto border-t-4 border-[var(--color-green-primary)]">
       {/* Main 4 columns */}
       <div className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 

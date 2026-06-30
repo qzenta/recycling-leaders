@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   description:
     "Sedibeng's trusted scrap metal buyer since 2017. We buy copper, aluminium, steel and more. Bin collection contracts available.",
   metadataBase: new URL("https://recyclingleaders.co.za"),
+  icons: {
+    icon: "/images/ARL-icon-diamond.png",
+    apple: "/images/ARL-icon-diamond.png",
+  },
   openGraph: {
     siteName: "All Recycling Leaders",
     locale: "en_ZA",

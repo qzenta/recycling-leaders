@@ -48,12 +48,12 @@ export default function HeroCarousel() {
           key={s.src}
           className={`absolute inset-0 transition-opacity duration-1000 ${i === current ? "opacity-100" : "opacity-0"}`}
         >
-          <Image src={s.src} alt={s.alt} fill priority={i === 0} className="object-cover object-center brightness-90" sizes="100vw" />
+          <Image src={s.src} alt={s.alt} fill priority={i === 0} className="object-cover object-center" sizes="100vw" />
         </div>
       ))}
 
-      {/* Gradient — stronger at bottom so text always readable */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/30" />
+      {/* Gradient — lighter top, readable text zone at bottom */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/10" />
 
       <div className="relative flex flex-col items-center justify-center text-center px-4 pt-24 pb-16">
         {/* Pill badge */}
