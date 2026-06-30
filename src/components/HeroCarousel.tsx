@@ -24,13 +24,13 @@ const slides = [
     objectPos:   "center 20%",
   },
   {
-    src:         "/images/csr-community-parcels-1.jpeg",
-    alt:         "ARL community upliftment — giving back to Sedibeng",
+    src:         "/images/fleet-trucks-yard-1.jpeg",
+    alt:         "ARL bin collection fleet ready for service",
     headline:    "Monthly Bin Collection Contracts",
     subheadline: "We place the bins, we collect, we recycle. One retainer. Zero hassle.",
     cta1:        { label: "Get a Contract", href: "/bin-collection" },
     cta2:        { label: "Contact Us",     href: "/contact",        wa: false },
-    objectPos:   "center 30%",
+    objectPos:   "center 40%",
   },
 ];
 
