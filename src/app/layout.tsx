@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import Script from "next/script";
+import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import CookieConsent from "@/components/CookieConsent";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -49,10 +51,12 @@ export default function RootLayout({
         className="min-h-screen flex flex-col antialiased"
         style={{ fontFamily: "var(--font-body)" }}
       >
+        <TopBar />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
+        <CookieConsent />
 
         {GA_ID && (
           <>

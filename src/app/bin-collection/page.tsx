@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
+import { serviceSchema, breadcrumb } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Monthly Bin Collection Contracts — Vaal Region | ARL",
@@ -163,6 +164,8 @@ export default function BinCollectionPage() {
           Discuss your bin plan
         </a>
       </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema("Scrap Metal Bin Collection", "ARL places scrap metal bins at business premises and collects on schedule. Businesses earn from the scrap value — monthly contracts available across Sedibeng and the Vaal.", "/bin-collection")) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb([{ name: "Home", url: "https://recyclingleaders.co.za" }, { name: "Bin Collection", url: "https://recyclingleaders.co.za/bin-collection" }])) }} />
     </>
   );
 }

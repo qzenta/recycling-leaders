@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
+import { serviceSchema, breadcrumb } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Recycling Supply Partners — Bulk Scrap Metal | ARL",
@@ -145,6 +146,8 @@ export default function RecyclingPartnersPage() {
           />
         </div>
       </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema("Recycling Partnership", "ARL supplies consistent volumes of sorted ferrous and non-ferrous scrap metal to industrial buyers, foundries, and processors across South Africa.", "/recycling-partners")) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb([{ name: "Home", url: "https://recyclingleaders.co.za" }, { name: "Recycling Partners", url: "https://recyclingleaders.co.za/recycling-partners" }])) }} />
     </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
+import { serviceSchema, breadcrumb } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Sell Your Scrap Metal — Fair Prices in Sedibeng | ARL",
@@ -17,12 +18,12 @@ const metals = [
   { icon: "🟡", name: "Brass", note: "Yellow brass, red brass, plumbing" },
   { icon: "⬛", name: "Lead", note: "Wheel weights, pipes, batteries" },
   { icon: "✨", name: "Stainless Steel", note: "304, 316, kitchen grade" },
-  { icon: "🔋", name: "Car Batteries", note: "Lead-acid — all sizes" },
+  { icon: "🔋", name: "Scrap Batteries", note: "Lead-acid car batteries — all sizes accepted as scrap" },
   { icon: "💻", name: "E-Waste", note: "Computers, cables, transformers" },
 ];
 
 const steps = [
-  { num: "1", label: "Bring your scrap", desc: "Drive to our yard at 74 Fairbank Street, Vanderbijlpark, Gauteng, 1911." },
+  { num: "1", label: "Bring your scrap", desc: "Drive to our yard at 74 Fairbanks Street, Vanderbijlpark, Gauteng, 1911." },
   { num: "2", label: "We weigh accurately", desc: "We use calibrated scales — fair, transparent weighing every time." },
   { num: "3", label: "You get paid", desc: "Same-day cash or EFT payment. No delays, no hassle." },
 ];
@@ -120,7 +121,7 @@ export default function SellScrapPage() {
                 label: "Metal Type",
                 type: "select",
                 required: true,
-                options: ["Copper", "Aluminium", "Cast Iron", "Steel", "Brass", "Lead", "Stainless Steel", "Car Batteries", "E-Waste", "Mixed / Other"],
+                options: ["Copper", "Aluminium", "Cast Iron", "Steel", "Brass", "Lead", "Stainless Steel", "Scrap Batteries", "E-Waste", "Mixed / Other"],
               },
               { name: "Estimated Quantity", label: "Estimated Quantity (kg/ton)", type: "text" },
             ]}
@@ -132,27 +133,18 @@ export default function SellScrapPage() {
       <section className="bg-white py-14 px-4">
         <div className="max-w-4xl mx-auto">
           <h2
-            className="text-3xl font-bold text-center mb-6 text-[var(--color-grey-darkest)]"
+            className="text-3xl font-bold text-center mb-2 text-[var(--color-grey-darkest)]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Find Us
           </h2>
-          <div className="rounded-xl overflow-hidden shadow-sm mb-6 aspect-video">
-            <iframe
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAJFakbESf2xcpUGTBYpm-s2HW5Np07HXQ&q=74+Fairbank+Street,Vanderbijlpark,Gauteng,1911,South+Africa"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="ARL Location"
-            />
-          </div>
-          <div className="grid sm:grid-cols-2 gap-4 text-sm text-[var(--color-grey-muted)]">
+          <p className="text-center text-sm text-[var(--color-grey-muted)] mb-4">
+            74 Fairbanks Street, Vanderbijlpark, Gauteng, 1911
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4 text-sm text-[var(--color-grey-muted)] mb-6">
             <div className="bg-[var(--color-green-light)] rounded-xl p-4">
               <div className="font-semibold text-[var(--color-grey-dark)] mb-1">📍 Address</div>
-              <div>74 Fairbank Street<br />Vanderbijlpark, Gauteng, 1911</div>
+              <div>74 Fairbanks Street<br />Vanderbijlpark, Gauteng, 1911</div>
             </div>
             <div className="bg-[var(--color-green-light)] rounded-xl p-4">
               <div className="font-semibold text-[var(--color-grey-dark)] mb-1">🕐 Hours</div>
@@ -161,6 +153,22 @@ export default function SellScrapPage() {
           </div>
         </div>
       </section>
+      {/* Map — full width, reduced height */}
+      <div className="w-full h-72">
+        <iframe
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAJFakbESf2xcpUGTBYpm-s2HW5Np07HXQ&q=74+Fairbanks+Street,Vanderbijlpark,Gauteng,1911,South+Africa&zoom=16"
+          width="100%"
+          height="100%"
+          style={{ border: 0, display: "block" }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="ARL Location"
+        />
+      </div>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema("Scrap Metal Buying", "ARL buys copper, aluminium, steel, iron, brass, lead, stainless steel and e-waste. Accurate weighing, fair market prices, same-day payment.", "/sell-scrap")) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb([{ name: "Home", url: "https://recyclingleaders.co.za" }, { name: "Sell Scrap Metal", url: "https://recyclingleaders.co.za/sell-scrap" }])) }} />
 
       {/* WhatsApp CTA */}
       <section className="bg-[var(--color-green-primary)] py-12 px-4 text-center">
