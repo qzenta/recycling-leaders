@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const coreRoutes = [
     "/",
     "/sell-scrap",
+    "/copper-recycling",
+    "/aluminium-recycling",
+    "/steel-recycling",
+    "/brass-recycling",
     "/recycling-partners",
     "/bin-collection",
     "/gallery",
