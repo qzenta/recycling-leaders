@@ -20,12 +20,12 @@ export default function PartnersMarquee() {
         Industry Partners &amp; Associations
       </p>
       <div className="relative flex">
-        <div className="flex animate-marquee gap-6 whitespace-nowrap">
+        <div className="flex animate-marquee gap-10 whitespace-nowrap items-center">
           {[...partners, ...partners].map((p, i) => (
             <div
               key={i}
-              className="flex items-center justify-center gap-3 bg-[var(--color-grey-bg)] border border-[var(--color-grey-border)] rounded-xl px-5 py-3 flex-shrink-0"
-              style={{ minWidth: "160px", height: "72px" }}
+              className="flex items-center justify-center flex-shrink-0"
+              style={{ minWidth: "120px", height: "56px" }}
             >
               <Image
                 src={p.logo}
@@ -33,6 +33,7 @@ export default function PartnersMarquee() {
                 width={120}
                 height={48}
                 className="object-contain max-h-10 w-auto"
+                style={{ filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.18))", mixBlendMode: "multiply" }}
               />
             </div>
           ))}
