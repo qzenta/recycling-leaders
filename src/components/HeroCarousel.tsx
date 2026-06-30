@@ -12,22 +12,25 @@ const slides = [
     subheadline: "Sedibeng's trusted scrap metal buyer and recycling partner since 2017",
     cta1:        { label: "Get a Price Today", href: "/sell-scrap" },
     cta2:        { label: "Request a Quote",   href: "/contact",   wa: false },
+    objectPos:   "center center",
   },
   {
-    src:         "/images/operations-crane-scrap-1.jpeg",
-    alt:         "Crane operations at the ARL scrap yard",
+    src:         "/images/team-owner-staff-1.jpeg",
+    alt:         "The ARL team at our Vanderbijlpark yard",
     headline:    "We Buy All Scrap Metal — Fast & Fair",
     subheadline: "Copper, aluminium, steel, brass and more. Accurate weighing. Same-day payment.",
     cta1:        { label: "See What We Buy", href: "/sell-scrap" },
     cta2:        { label: "WhatsApp Us",     href: "https://wa.me/27720800327?text=Hi%20ARL%2C%20I%20have%20scrap%20to%20sell", wa: true },
+    objectPos:   "center 20%",
   },
   {
-    src:         "/images/fleet-trucks-yard-1.jpeg",
-    alt:         "ARL collection fleet ready for service",
+    src:         "/images/csr-community-parcels-1.jpeg",
+    alt:         "ARL community upliftment — giving back to Sedibeng",
     headline:    "Monthly Bin Collection Contracts",
     subheadline: "We place the bins, we collect, we recycle. One retainer. Zero hassle.",
     cta1:        { label: "Get a Contract", href: "/bin-collection" },
     cta2:        { label: "Contact Us",     href: "/contact",        wa: false },
+    objectPos:   "center 30%",
   },
 ];
 
@@ -48,12 +51,12 @@ export default function HeroCarousel() {
           key={s.src}
           className={`absolute inset-0 transition-opacity duration-1000 ${i === current ? "opacity-100" : "opacity-0"}`}
         >
-          <Image src={s.src} alt={s.alt} fill priority={i === 0} className="object-cover object-center" sizes="100vw" />
+          <Image src={s.src} alt={s.alt} fill priority={i === 0} className="object-cover" style={{ objectPosition: s.objectPos ?? "center center" }} sizes="100vw" />
         </div>
       ))}
 
-      {/* Gradient — lighter top, readable text zone at bottom */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/10" />
+      {/* Gradient — dark at bottom for text, light at top to show image */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/5" />
 
       <div className="relative flex flex-col items-center justify-center text-center px-4 pt-24 pb-16">
         {/* Pill badge */}
@@ -63,11 +66,13 @@ export default function HeroCarousel() {
 
         <h1
           className="text-4xl md:text-6xl font-bold leading-tight mb-4 max-w-4xl transition-all duration-500"
-          style={{ fontFamily: "var(--font-heading)" }}
+          style={{ fontFamily: "var(--font-heading)", textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}
         >
           {slide.headline}
         </h1>
-        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-3 transition-all duration-500">
+        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-3 transition-all duration-500"
+          style={{ textShadow: "0 1px 8px rgba(0,0,0,0.55)" }}
+        >
           {slide.subheadline}
         </p>
 
