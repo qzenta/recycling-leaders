@@ -156,7 +156,7 @@ export default function SellScrapPage() {
       {/* Map — full width, reduced height */}
       <div className="w-full h-72">
         <iframe
-          src="https://www.google.com/maps/embed/v1/place?key=REDACTED_GOOGLE_MAPS_KEY&q=74+Fairbanks+Street,Vanderbijlpark,Gauteng,1911,South+Africa&zoom=16"
+          src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=74+Fairbanks+Street,Vanderbijlpark,Gauteng,1911,South+Africa&zoom=16`}
           width="100%"
           height="100%"
           style={{ border: 0, display: "block" }}

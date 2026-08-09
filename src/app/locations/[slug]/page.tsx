@@ -164,7 +164,7 @@ export default async function LocationPage({
             </div>
             <div className="rounded-xl overflow-hidden shadow-sm aspect-video">
               <iframe
-                src="https://www.google.com/maps/embed/v1/place?key=REDACTED_GOOGLE_MAPS_KEY&q=74+Fairbanks+Street,Vanderbijlpark,Gauteng,1911,South+Africa"
+                src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=74+Fairbanks+Street,Vanderbijlpark,Gauteng,1911,South+Africa`}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
